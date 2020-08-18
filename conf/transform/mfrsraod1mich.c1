@@ -1,0 +1,6 @@
+aod_mfrsr_C1_500:time:goodfrac_bad_min = 0.3;
+aod_mfrsr_C1_500:time:goodfrac_ind_min = 0.3;
+aod_mfrsr_C1_500:time:qc_mask = 4095;
+aod_mfrsr_E13_500:time:goodfrac_bad_min = 0.3;
+aod_mfrsr_E13_500:time:goodfrac_ind_min = 0.3;
+aod_mfrsr_E13_500:time:qc_mask = 4095;

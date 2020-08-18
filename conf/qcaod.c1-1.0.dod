@@ -1,0 +1,2373 @@
+%gDOD = (
+
+  'ds_class'    => 'qcaod.c1',
+  'dod_version' => '1.0',
+
+  'dims' => [
+    {
+      'name'   => 'time',
+      'length' => 0,
+    },
+    {
+      'name'   => 'bound',
+      'length' => 2,
+    },
+    {
+      'name'   => 'ncomparisons',
+      'length' => 6,
+    },
+  ],
+  'atts' => [
+    {
+      'name'  => 'command_line',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'Conventions',
+      'type'  => 'char',
+      'value' => 'ARM-1.2',
+    },
+    {
+      'name'  => 'process_version',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'dod_version',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'input_datastreams',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'site_id',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'platform_id',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'facility_id',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'data_level',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'location_description',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'datastream',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'doi',
+      'type'  => 'char',
+      'value' => '10.5439/1435403',
+    },
+    {
+      'name'  => 'history',
+      'type'  => 'char',
+    },
+  ],
+  'vars' => [
+    {
+      'name' => 'base_time',
+      'type' => 'int',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'string',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Base time in Epoch',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'seconds since 1970-1-1 0:00:00 0:00',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'time_offset',
+        },
+      ],
+    },
+    {
+      'name' => 'time_offset',
+      'type' => 'double',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Time offset from base_time',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'base_time',
+        },
+      ],
+    },
+    {
+      'name' => 'time',
+      'type' => 'double',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Time offset from midnight',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'bounds',
+          'type'  => 'char',
+          'value' => 'time_bounds',
+        },
+        {
+          'name'  => 'calendar',
+          'type'  => 'char',
+          'value' => 'gregorian',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'time',
+        },
+      ],
+    },
+    {
+      'name' => 'time_bounds',
+      'type' => 'double',
+      'dims' => 'time,bound',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Time cell bounds',
+        },
+        {
+          'name'  => 'bound_offsets',
+          'type'  => 'double',
+          'value' => '0, 60',
+        },
+      ],
+    },
+    {
+      'name' => 'ncomparisons',
+      'type' => 'short',
+      'dims' => 'ncomparisons',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Coordinate variable for ncomparisons',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'List of comparisons of datastreams',
+        },
+        {
+          'name'  => 'flag_values',
+          'type'  => 'short',
+          'value' => '1, 2, 3, 4, 5, 6',
+        },
+        {
+          'name'  => 'flag_meanings',
+          'type'  => 'char',
+          'value' => 'Comparison-between-aod_mfrsr_C1-and-aod_mfrsr_E13 Comparison-between-aod_mfrsr_C1-and-aod_nimfr Comparison-between-aod_mfrsr_C1-and-aod_cimel Comparison-between-aod_mfrsr_E13-and-aod_nimfr Comparison-between-aod_mfrsr_E13-and-aod_cimel Comparison-between-aod_nimfr-and-aod_cimel',
+        },
+        {
+          'name'  => 'flag_1_description',
+          'type'  => 'char',
+          'value' => 'Comparison between aod_mfrsr_C1 and aod_mfrsr_E13 data',
+        },
+        {
+          'name'  => 'flag_2_description',
+          'type'  => 'char',
+          'value' => 'Comparison between aod_mfrsr_C1 and aod_nimfr data',
+        },
+        {
+          'name'  => 'flag_3_description',
+          'type'  => 'char',
+          'value' => 'Comparison between aod_mfrsr_C1 and aod_cimel data',
+        },
+        {
+          'name'  => 'flag_4_description',
+          'type'  => 'char',
+          'value' => 'Comparison between aod_mfrsr_E13 and aod_nimfr data',
+        },
+        {
+          'name'  => 'flag_5_description',
+          'type'  => 'char',
+          'value' => 'Comparison between aod_mfrsr_E13 and aod_cimel data',
+        },
+        {
+          'name'  => 'flag_6_description',
+          'type'  => 'char',
+          'value' => 'Comparison between aod_nimfr and aod_cimel data',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_cimel_500',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 500 nm from the csphotaot.a1 datastream',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'aod_cimel_500_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_cimel_500_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_cimel_500',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_cimel_870',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 870 nm from the csphotaot.a1 datastream',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'aod_cimel_870_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_cimel_870_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_cimel_870',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_nimfr_500',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 500 nm from the nimfraod1mich.c1 datastream',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'explanation_of_aerosol_optical_depth',
+          'type'  => 'char',
+          'value' => 'aerosol optical depth = (total optical depth - Rayleigh optical thickness - ozone optical depth)',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_aod_nimfr_500 aod_nimfr_500_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_nimfr_500_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_nimfr_500',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_nimfr_500',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Aerosol Optical Depth at 500 nm from the nimfraod1mich.c1 datastream',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed values which should be interpreted as listed. No bits set (zero) represents good data.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD:  Transformation could not finish, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE:  Some, or all, of the input values used to create this output value had a QC assessment of Indeterminate.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_3_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_4_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_5_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_5_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_6_description',
+          'type'  => 'char',
+          'value' => 'QC_SOME_BAD_INPUTS:  Some, but not all, of the inputs in the averaging window were flagged as bad and excluded from the transform.',
+        },
+        {
+          'name'  => 'bit_6_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_7_description',
+          'type'  => 'char',
+          'value' => 'QC_ZERO_WEIGHT:  The weights for all the input points to be averaged for this output bin were set to zero.',
+        },
+        {
+          'name'  => 'bit_7_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_8_description',
+          'type'  => 'char',
+          'value' => 'QC_OUTSIDE_RANGE:  No input samples exist in the transformation region, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_8_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_9_description',
+          'type'  => 'char',
+          'value' => 'QC_ALL_BAD_INPUTS:  All the input values in the transformation region are bad, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_9_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_10_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_bad_max.',
+        },
+        {
+          'name'  => 'bit_10_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_11_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_ind_max.',
+        },
+        {
+          'name'  => 'bit_11_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_12_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_GOODFRAC:  Fraction of good and indeterminate points over averaging interval are less than limit set by transform parameter goodfrac_bad_min.',
+        },
+        {
+          'name'  => 'bit_12_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_13_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_GOODFRAC:  Fraction of good and indeterminate points over averaging interval is less than limit set by transform parameter goodfrac_ind_min.',
+        },
+        {
+          'name'  => 'bit_13_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_nimfr_870',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 870 nm from the nimfraod1mich.c1 datastream',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'explanation_of_aerosol_optical_depth',
+          'type'  => 'char',
+          'value' => 'aerosol optical depth = (total optical depth - Rayleigh optical thickness - ozone optical depth)',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_aod_nimfr_870 aod_nimfr_870_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_nimfr_870_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_nimfr_870',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_nimfr_870',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Aerosol Optical Depth at 870 nm from the nimfraod1mich.c1 datastream',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed values which should be interpreted as listed. No bits set (zero) represents good data.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD:  Transformation could not finish, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE:  Some, or all, of the input values used to create this output value had a QC assessment of Indeterminate.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_3_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_4_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_5_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_5_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_6_description',
+          'type'  => 'char',
+          'value' => 'QC_SOME_BAD_INPUTS:  Some, but not all, of the inputs in the averaging window were flagged as bad and excluded from the transform.',
+        },
+        {
+          'name'  => 'bit_6_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_7_description',
+          'type'  => 'char',
+          'value' => 'QC_ZERO_WEIGHT:  The weights for all the input points to be averaged for this output bin were set to zero.',
+        },
+        {
+          'name'  => 'bit_7_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_8_description',
+          'type'  => 'char',
+          'value' => 'QC_OUTSIDE_RANGE:  No input samples exist in the transformation region, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_8_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_9_description',
+          'type'  => 'char',
+          'value' => 'QC_ALL_BAD_INPUTS:  All the input values in the transformation region are bad, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_9_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_10_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_bad_max.',
+        },
+        {
+          'name'  => 'bit_10_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_11_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_ind_max.',
+        },
+        {
+          'name'  => 'bit_11_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_12_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_GOODFRAC:  Fraction of good and indeterminate points over averaging interval are less than limit set by transform parameter goodfrac_bad_min.',
+        },
+        {
+          'name'  => 'bit_12_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_13_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_GOODFRAC:  Fraction of good and indeterminate points over averaging interval is less than limit set by transform parameter goodfrac_ind_min.',
+        },
+        {
+          'name'  => 'bit_13_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_E13_500',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 500 nm from the mfrsraod1mich.c1 datastram at the E13 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'explanation_of_aerosol_optical_depth',
+          'type'  => 'char',
+          'value' => 'aerosol optical depth = (total optical depth - Rayleigh optical thickness - ozone optical depth)',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_aod_mfrsr_E13_500 aod_mfrsr_E13_500_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_E13_500_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_mfrsr_E13_500',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_mfrsr_E13_500',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Aerosol Optical Depth at 500 nm from the mfrsraod1mich.c1 datastram at the E13 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed values which should be interpreted as listed. No bits set (zero) represents good data.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD:  Transformation could not finish, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE:  Some, or all, of the input values used to create this output value had a QC assessment of Indeterminate.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_3_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_4_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_5_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_5_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_6_description',
+          'type'  => 'char',
+          'value' => 'QC_SOME_BAD_INPUTS:  Some, but not all, of the inputs in the averaging window were flagged as bad and excluded from the transform.',
+        },
+        {
+          'name'  => 'bit_6_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_7_description',
+          'type'  => 'char',
+          'value' => 'QC_ZERO_WEIGHT:  The weights for all the input points to be averaged for this output bin were set to zero.',
+        },
+        {
+          'name'  => 'bit_7_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_8_description',
+          'type'  => 'char',
+          'value' => 'QC_OUTSIDE_RANGE:  No input samples exist in the transformation region, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_8_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_9_description',
+          'type'  => 'char',
+          'value' => 'QC_ALL_BAD_INPUTS:  All the input values in the transformation region are bad, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_9_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_10_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_bad_max.',
+        },
+        {
+          'name'  => 'bit_10_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_11_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_ind_max.',
+        },
+        {
+          'name'  => 'bit_11_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_12_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_GOODFRAC:  Fraction of good and indeterminate points over averaging interval are less than limit set by transform parameter goodfrac_bad_min.',
+        },
+        {
+          'name'  => 'bit_12_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_13_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_GOODFRAC:  Fraction of good and indeterminate points over averaging interval is less than limit set by transform parameter goodfrac_ind_min.',
+        },
+        {
+          'name'  => 'bit_13_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_E13_870',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 870 nm from the mfrsraod1mich.c1 datastram at the E13 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'explanation_of_aerosol_optical_depth',
+          'type'  => 'char',
+          'value' => 'aerosol optical depth = (total optical depth - Rayleigh optical thickness - ozone optical depth)',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_aod_mfrsr_E13_870 aod_mfrsr_E13_870_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_E13_870_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_mfrsr_E13_870',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_mfrsr_E13_870',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Aerosol Optical Depth at 870 nm from the mfrsraod1mich.c1 datastram at the E13 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed values which should be interpreted as listed. No bits set (zero) represents good data.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD:  Transformation could not finish, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE:  Some, or all, of the input values used to create this output value had a QC assessment of Indeterminate.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_3_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_4_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_5_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_5_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_6_description',
+          'type'  => 'char',
+          'value' => 'QC_SOME_BAD_INPUTS:  Some, but not all, of the inputs in the averaging window were flagged as bad and excluded from the transform.',
+        },
+        {
+          'name'  => 'bit_6_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_7_description',
+          'type'  => 'char',
+          'value' => 'QC_ZERO_WEIGHT:  The weights for all the input points to be averaged for this output bin were set to zero.',
+        },
+        {
+          'name'  => 'bit_7_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_8_description',
+          'type'  => 'char',
+          'value' => 'QC_OUTSIDE_RANGE:  No input samples exist in the transformation region, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_8_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_9_description',
+          'type'  => 'char',
+          'value' => 'QC_ALL_BAD_INPUTS:  All the input values in the transformation region are bad, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_9_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_10_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_bad_max.',
+        },
+        {
+          'name'  => 'bit_10_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_11_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_ind_max.',
+        },
+        {
+          'name'  => 'bit_11_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_12_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_GOODFRAC:  Fraction of good and indeterminate points over averaging interval are less than limit set by transform parameter goodfrac_bad_min.',
+        },
+        {
+          'name'  => 'bit_12_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_13_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_GOODFRAC:  Fraction of good and indeterminate points over averaging interval is less than limit set by transform parameter goodfrac_ind_min.',
+        },
+        {
+          'name'  => 'bit_13_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_C1_500',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 500 nm from the mfrsraod1mich.c1 datastram at the SGP C1 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'explanation_of_aerosol_optical_depth',
+          'type'  => 'char',
+          'value' => 'aerosol optical depth = (total optical depth - Rayleigh optical thickness - ozone optical depth)',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_aod_mfrsr_C1_500 aod_mfrsr_C1_500_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_C1_500_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_mfrsr_C1_500',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_mfrsr_C1_500',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Aerosol Optical Depth at 500 nm from the mfrsraod1mich.c1 datastram at the SGP C1 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed values which should be interpreted as listed. No bits set (zero) represents good data.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD:  Transformation could not finish, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE:  Some, or all, of the input values used to create this output value had a QC assessment of Indeterminate.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_3_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_4_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_5_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_5_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_6_description',
+          'type'  => 'char',
+          'value' => 'QC_SOME_BAD_INPUTS:  Some, but not all, of the inputs in the averaging window were flagged as bad and excluded from the transform.',
+        },
+        {
+          'name'  => 'bit_6_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_7_description',
+          'type'  => 'char',
+          'value' => 'QC_ZERO_WEIGHT:  The weights for all the input points to be averaged for this output bin were set to zero.',
+        },
+        {
+          'name'  => 'bit_7_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_8_description',
+          'type'  => 'char',
+          'value' => 'QC_OUTSIDE_RANGE:  No input samples exist in the transformation region, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_8_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_9_description',
+          'type'  => 'char',
+          'value' => 'QC_ALL_BAD_INPUTS:  All the input values in the transformation region are bad, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_9_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_10_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_bad_max.',
+        },
+        {
+          'name'  => 'bit_10_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_11_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_ind_max.',
+        },
+        {
+          'name'  => 'bit_11_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_12_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_GOODFRAC:  Fraction of good and indeterminate points over averaging interval are less than limit set by transform parameter goodfrac_bad_min.',
+        },
+        {
+          'name'  => 'bit_12_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_13_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_GOODFRAC:  Fraction of good and indeterminate points over averaging interval is less than limit set by transform parameter goodfrac_ind_min.',
+        },
+        {
+          'name'  => 'bit_13_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_C1_870',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Aerosol Optical Depth at 870 nm from the mfrsraod1mich.c1 datastram at the SGP C1 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'explanation_of_aerosol_optical_depth',
+          'type'  => 'char',
+          'value' => 'aerosol optical depth = (total optical depth - Rayleigh optical thickness - ozone optical depth)',
+        },
+        {
+          'name'  => 'daily_mean',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'daily_std',
+          'type'  => 'float',
+        },
+        {
+          'name'  => 'number_good_points',
+          'type'  => 'int',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_aod_mfrsr_C1_870 aod_mfrsr_C1_870_goodfraction',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'AOD values less than 0 or greater than 1 are not used for transformation',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_mfrsr_C1_870_goodfraction',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Metric goodfraction for field aod_mfrsr_C1_870',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_mfrsr_C1_870',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Aerosol Optical Depth at 870 nm from the mfrsraod1mich.c1 datastram at the SGP C1 site',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed values which should be interpreted as listed. No bits set (zero) represents good data.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD:  Transformation could not finish, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE:  Some, or all, of the input values used to create this output value had a QC assessment of Indeterminate.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_3_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_4_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_5_description',
+          'type'  => 'char',
+          'value' => 'This bit is not used for this qc',
+        },
+        {
+          'name'  => 'bit_5_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_6_description',
+          'type'  => 'char',
+          'value' => 'QC_SOME_BAD_INPUTS:  Some, but not all, of the inputs in the averaging window were flagged as bad and excluded from the transform.',
+        },
+        {
+          'name'  => 'bit_6_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_7_description',
+          'type'  => 'char',
+          'value' => 'QC_ZERO_WEIGHT:  The weights for all the input points to be averaged for this output bin were set to zero.',
+        },
+        {
+          'name'  => 'bit_7_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_8_description',
+          'type'  => 'char',
+          'value' => 'QC_OUTSIDE_RANGE:  No input samples exist in the transformation region, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_8_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_9_description',
+          'type'  => 'char',
+          'value' => 'QC_ALL_BAD_INPUTS:  All the input values in the transformation region are bad, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_9_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_10_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_bad_max.',
+        },
+        {
+          'name'  => 'bit_10_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_11_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_STD:  Standard deviation over averaging interval is greater than limit set by transform parameter std_ind_max.',
+        },
+        {
+          'name'  => 'bit_11_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_12_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD_GOODFRAC:  Fraction of good and indeterminate points over averaging interval are less than limit set by transform parameter goodfrac_bad_min.',
+        },
+        {
+          'name'  => 'bit_12_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_13_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE_GOODFRAC:  Fraction of good and indeterminate points over averaging interval is less than limit set by transform parameter goodfrac_ind_min.',
+        },
+        {
+          'name'  => 'bit_13_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_500',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'AOD best estimate at 500 nm. Mean of any AOD points considered good',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'aod_be_500_random_uncertainty qc_aod_be_500 aod_be_500_quadrature_uncertainty aod_be_500_range aod_be_500_source',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_be_500',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: AOD best estimate at 500 nm. Mean of any AOD points considered good',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains integer values indicating the results of QC test on the data. Non-zero integers indicate the QC condition given in the description for those integers; a value of 0 indicates the data has not failed any QC tests.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'integer',
+        },
+        {
+          'name'  => 'flag_1_description',
+          'type'  => 'char',
+          'value' => 'Only 1 dataset available',
+        },
+        {
+          'name'  => 'flag_1_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'flag_2_description',
+          'type'  => 'char',
+          'value' => 'No good data available',
+        },
+        {
+          'name'  => 'flag_2_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_500_random_uncertainty',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Standard deviation of data points used in aod_be_500 when 2 or more measurements available. Standard value of 0.02 when 1 AOD variable used',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_500_quadrature_uncertainty',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quadrature of uncertainty values used in aod_be_500',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_500_range',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Range of AOD values (max-min) used in aod_be_500',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_500_source',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Source for field: AOD best estimate at 500 nm. Mean of any AOD points considered good',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed integer values, where each bit represents a source of the data. Non-zero bits indicate the source used in the description for those bits; a value of 0 (no bits set) indicates no source.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'Used aod from MFRSR C1 to calculate aod_be_500',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'Used aod from MFRSR E13 to calculate aod_be_500',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'Used aod from NIMFR to calculate aod_be_500',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'Used aod from CIMEL to calculate aod_be_500',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'Flag indicating which of 4 AOD variables used in a given 1 minute value of AOD_BE variable',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_870',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'AOD best estimate at 870 nm. Mean of any AOD points considered good',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'aod_be_870_random_uncertainty qc_aod_be_870 aod_be_870_quadrature_uncertainty aod_be_870_range aod_be_870_source',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_aod_be_870',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: AOD best estimate at 870 nm. Mean of any AOD points considered good',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains integer values indicating the results of QC test on the data. Non-zero integers indicate the QC condition given in the description for those integers; a value of 0 indicates the data has not failed any QC tests.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'integer',
+        },
+        {
+          'name'  => 'flag_1_description',
+          'type'  => 'char',
+          'value' => 'Only 1 dataset available',
+        },
+        {
+          'name'  => 'flag_1_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'flag_2_description',
+          'type'  => 'char',
+          'value' => 'No good data available',
+        },
+        {
+          'name'  => 'flag_2_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_870_random_uncertainty',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Standard deviation of data points used in aod_be_870 when 2 or more measurements available. Standard value of 0.02 when 1 AOD variable used',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_870_quadrature_uncertainty',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quadrature of uncertainty values used in aod_be_870',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_870_range',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Range of AOD values (max-min) used in aod_be_870',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+      ],
+    },
+    {
+      'name' => 'aod_be_870_source',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Source for field: AOD best estimate at 870 nm. Mean of any AOD points considered good',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed integer values, where each bit represents a source of the data. Non-zero bits indicate the source used in the description for those bits; a value of 0 (no bits set) indicates no source.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'Used aod from MFRSR C1 to calculate aod_be_870',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'Used aod from MFRSR E13 to calculate aod_be_870',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'Used aod from NIMFR to calculate aod_be_870',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'Used aod from CIMEL to calculate aod_be_870',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'Bits indicating which of 4 AOD variables used in a given 1 minute value of AOD_BE variable',
+        },
+      ],
+    },
+    {
+      'name' => 'daily_RMSD_500',
+      'type' => 'float',
+      'dims' => 'ncomparisons',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Root mean square deviation between two variables for 500 nm',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'threshold',
+          'type'  => 'char',
+          'value' => '>= 0.9',
+        },
+      ],
+    },
+    {
+      'name' => 'daily_npoint_500',
+      'type' => 'float',
+      'dims' => 'ncomparisons',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Number of points available for comparison between two variables for 500 nm',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'threshold',
+          'type'  => 'char',
+          'value' => '>= 100',
+        },
+      ],
+    },
+    {
+      'name' => 'daily_mean_bias_500',
+      'type' => 'float',
+      'dims' => 'ncomparisons',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Mean bias between two variables for 500 nm',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'threshold',
+          'type'  => 'char',
+          'value' => '<= 0.02',
+        },
+      ],
+    },
+    {
+      'name' => 'daily_slope_500',
+      'type' => 'float',
+      'dims' => 'ncomparisons',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Slope of linear regression line between two variables for 500 nm',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'threshold',
+          'type'  => 'char',
+          'value' => '0.8 <= slope <= 1.2',
+        },
+      ],
+    },
+    {
+      'name' => 'good_data_flag',
+      'type' => 'int',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Daily value indicating which of 4 AOD datastreams declared good for a given day.',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => '1',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed integer values, where each bit represents a daily source of the data. Non-zero bits indicate the daily source used in the description for those bits; a value of 0 (no bits set) indicates no daily source.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'Used aod from MFRSR C1 to calculate aod_be',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'Used aod from MFRSR E13 to calculate aod_be',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'Used aod from NIMFR to calculate aod_be',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'Used aod from CIMEL to calculate aod_be',
+        },
+      ],
+    },
+    {
+      'name' => 'lat',
+      'type' => 'float',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'North latitude',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'degree_N',
+        },
+        {
+          'name'  => 'valid_min',
+          'type'  => 'float',
+          'value' => '-90',
+        },
+        {
+          'name'  => 'valid_max',
+          'type'  => 'float',
+          'value' => '90',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'latitude',
+        },
+      ],
+    },
+    {
+      'name' => 'lon',
+      'type' => 'float',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'East longitude',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'degree_E',
+        },
+        {
+          'name'  => 'valid_min',
+          'type'  => 'float',
+          'value' => '-180',
+        },
+        {
+          'name'  => 'valid_max',
+          'type'  => 'float',
+          'value' => '180',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'longitude',
+        },
+      ],
+    },
+    {
+      'name' => 'alt',
+      'type' => 'float',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Altitude above mean sea level',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'm',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'altitude',
+        },
+      ],
+    },
+  ],
+);
+

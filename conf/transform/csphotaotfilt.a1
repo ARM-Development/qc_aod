@@ -1,0 +1,2 @@
+aot_500:time:goodfrac_bad_min = 0.3;
+aot_500:time:goodfrac_ind_min = 0.3;

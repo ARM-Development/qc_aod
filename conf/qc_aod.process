@@ -1,0 +1,375 @@
+{
+  'ret' => {
+    'fields' => [
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_cimel_500'
+          }
+        ],
+        'qc' => 0,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_cimel_500',
+        'vars' => [
+          [
+            'aod_500'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'csphotaot_a1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_cimel_870'
+          }
+        ],
+        'qc' => 0,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_cimel_870',
+        'vars' => [
+          [
+            'aod_870'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'csphotaot_a1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_mfrsr_C1_500'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_mfrsr_C1_500',
+        'vars' => [
+          [
+            'aerosol_optical_depth_filter2'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'mfrsraod1michC1_c1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_mfrsr_C1_870'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_mfrsr_C1_870',
+        'vars' => [
+          [
+            'aerosol_optical_depth_filter5'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'mfrsraod1michC1_c1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_mfrsr_E13_500'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_mfrsr_E13_500',
+        'vars' => [
+          [
+            'aerosol_optical_depth_filter2'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'mfrsraod1michE13_c1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_mfrsr_E13_870'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_mfrsr_E13_870',
+        'vars' => [
+          [
+            'aerosol_optical_depth_filter5'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'mfrsraod1michE13_c1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_nimfr_500'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_nimfr_500',
+        'vars' => [
+          [
+            'aerosol_optical_depth_filter2'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'nimfraod1mich_c1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'qcaod.c1',
+            'f' => 'aod_nimfr_870'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 0,
+        'max' => undef,
+        'name' => 'aod_nimfr_870',
+        'vars' => [
+          [
+            'aerosol_optical_depth_filter5'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'nimfraod1mich_c1',
+        'delta' => undef,
+        'shape' => 'one_min',
+        'units' => 'unitless'
+      }
+    ],
+    'transforms' => {},
+    'desc' => 'AOD quality control product',
+    'shapes' => {
+      'one_min_subsample' => [
+        {
+          'talign' => -1,
+          'query' => undef,
+          'name' => 'time',
+          'vars' => [],
+          'interval' => '60',
+          'dtype' => undef,
+          'length' => 1440,
+          'ttype' => 'TRANS_SUBSAMPLE',
+          'trange' => undef,
+          'start' => '0',
+          'units' => undef
+        }
+      ],
+      'one_min' => [
+        {
+          'talign' => -1,
+          'query' => undef,
+          'name' => 'time',
+          'vars' => [],
+          'interval' => '60',
+          'dtype' => undef,
+          'length' => 1440,
+          'ttype' => 'TRANS_BIN_AVERAGE',
+          'trange' => undef,
+          'start' => '0',
+          'units' => undef
+        }
+      ]
+    },
+    'groups' => {
+      'mfrsraod1michE13_c1' => [
+        'mfrsraod1michE13_c1'
+      ],
+      'nimfraod1mich_c1' => [
+        'nimfraod1mich_c1'
+      ],
+      'csphotaot_a1' => [
+        'csphotaot_a1'
+      ],
+      'mfrsraod1michC1_c1' => [
+        'mfrsraod1michC1_c1'
+      ]
+    },
+    'name' => 'qc_aod',
+    'queries' => {
+      'mfrsraod1michE13_c1' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'c1',
+          'site' => 'sgp',
+          'order' => 1,
+          'fac' => 'E13',
+          'class' => 'mfrsraod1mich',
+          'sdep' => undef,
+          'fdep' => undef
+        }
+      ],
+      'nimfraod1mich_c1' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'c1',
+          'site' => undef,
+          'order' => 1,
+          'fac' => undef,
+          'class' => 'nimfraod1mich',
+          'sdep' => undef,
+          'fdep' => undef
+        }
+      ],
+      'csphotaot_a1' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'a1',
+          'site' => undef,
+          'order' => 1,
+          'fac' => undef,
+          'class' => 'csphotaodfiltqav3',
+          'sdep' => undef,
+          'fdep' => undef
+        }
+      ],
+      'mfrsraod1michC1_c1' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'c1',
+          'site' => 'sgp',
+          'order' => 1,
+          'fac' => 'C1',
+          'class' => 'mfrsraod1mich',
+          'sdep' => undef,
+          'fdep' => undef
+        }
+      ]
+    }
+  },
+  'locations' => [
+    {
+      'site' => 'sgp',
+      'fac' => 'C1'
+    }
+  ],
+  'outputs' => [
+    'qcaod.c1'
+  ],
+  'name' => 'qc_aod',
+  'cdesc' => '',
+  'props' => {
+    'processing_interval' => '86400'
+  },
+  'desc' => 'AOD quality control product',
+  'type' => 'VAP',
+  'class' => 'qc_aod',
+  'category' => 'VAP'
+}
