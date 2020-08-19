@@ -1,5 +1,5 @@
-# qc_aod
-Repository for the QCAOD VAP
+# Quality Controlled Aerosol Optical Depth VAP
+Repository for the Quality Controlled Aerosol Optical Depth VAP (QCAOD) VAP
 
 *******************************************************************************
 This material was prepared as an account of work sponsored by an agency of the United States Government.
