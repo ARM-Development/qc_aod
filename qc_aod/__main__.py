@@ -541,27 +541,6 @@ def process_data(proc_data, begin_date, end_date, input_data):
                   "aod_nimfr_870",
                   "aod_cimel_870" ]
 
-    #var_names_2 = [ "aod_mfrsr_C1_500", "aod_nimfr_500"]
-
-    #for var_name in var_names_2:
-    #    
-    #    var = dsproc.get_var(out_ds, var_name)
-    #    if var is None:
-    #        error_string = "Required variable {} not found in dataset".format(var_name)
-    #        dsproc.error(dsproc.EREQVAR, error_string) 
-    #        return(-1)
-
-    #    qc_var = dsproc.get_qc_var(var)
-    #    if qc_var is None:
-    #        continue
-
-    #    status = dsproc.qc_limit_checks(var, qc_var, 1, 2, 4)
-
-    #    if status == 0:
-    #        return(-1)
-    
-        
-
     # -------------------------------------------------------------
     # Get transformed variables and data
     # QC data is not required, but wanted, don't fail if don't find
@@ -571,7 +550,6 @@ def process_data(proc_data, begin_date, end_date, input_data):
     CDS_FLOAT = 5
 
     # Shape to None
-    #shape = (1440,)
     shape = None
 
     # -------------------------------------------------------------
@@ -733,7 +711,6 @@ def process_data(proc_data, begin_date, end_date, input_data):
 
 
     AT_LEAST_ONE = QC_INDETERMINATE_BITS + QC_SOME_BAD_INPUTS_BITS
-    #AT_LEAST_ONE = QC_INDETERMINATE_BITS 
     ###################
     # Location of filtered data
     # CIMEL has no qc data
